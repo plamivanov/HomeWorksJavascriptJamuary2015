@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        #myCanvas {
+            display:block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="550"></canvas>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var radius = 80;
+    var pi=Math.PI;
+
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);//void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise);
+    //ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
+    context.fillStyle = 'lightblue';
+    context.fill();
+    context.lineWidth = 5;
+    context.strokeStyle = 'blue';
+    context.stroke();
+    context.beginPath();
+    context.fillStyle='#3A6794';
+    context.ellipse(centerX-10,centerY-50,100,20,0,0,2*pi);
+    context.strokeStyle='black';
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.rect(centerX-50,centerY-170,100,110);
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.fillStyle='#3A6794';
+    context.ellipse(centerX,centerY-170,50,20,0,0,2*pi);
+    context.strokeStyle='black';
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.fillStyle='#3A6794';
+    context.ellipse(centerX,centerY-64,50,20,0,0,pi);
+    context.strokeStyle='black';
+    context.fill();
+    context.stroke();
+</script>
+</body>
+</html>

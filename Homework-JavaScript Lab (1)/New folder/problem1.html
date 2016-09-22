@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Write name</title>
+    <script>
+       window.onload=function(){
+           var canvas=document.getElementById("paper");
+           var ctx=canvas.getContext("2d");
+
+           ctx.fillStyle="orange";
+           ctx.fillRect(0,0,canvas.width,canvas.height);
+
+           ctx.font="70px Arial";
+           ctx.fillStyle="white";
+           ctx.textAlign = "center";
+           ctx.lineWidth=3;
+           ctx.fillText("Plamen",canvas.width/2,canvas.height/2);
+
+           ctx.fillStyle="red";
+           ctx.strokeText("Plamen",canvas.width/2,canvas.height/2)
+       }
+    </script>
+    <style>
+       #paper{
+           display:block;
+           margin:0 auto;
+           width:700px;
+           height:400px;
+       }
+    </style>
+
+</head>
+<body>
+<canvas id="paper">
+    Get Google Chrome...
+</canvas>
+</body>
+</html>
