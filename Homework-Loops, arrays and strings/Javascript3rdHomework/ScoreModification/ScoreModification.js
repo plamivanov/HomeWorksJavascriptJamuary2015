@@ -10,6 +10,6 @@ function filterOut(arr){
     console.log(validPoints)
 }
 
-var arr1=[200, 120, 23, 67, 350, 420, 170, 212, 401, 615, -1];
+var arr1=[200, 120, 23, 67, 350, 430, 170, 212, 401, 615, -1];
 
 filterOut(arr1);
